@@ -14,11 +14,62 @@ p, h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 
+/* util */
+
+@keyframes wiggle {
+	0% { transform: rotate(-15deg); }
+	50% { transform: rotate(15deg); }
+	100% { transform: rotate(-15deg); }
+}
+
 /* clicker */
 
 .wrapper.clicker .clicker {
 	width: 12em;
 	height: 12em;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 0.30em solid black;
+	transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+	animation: wiggle 3s infinite ease-in-out;
+}
+
+.wrapper.clicker .clicker:hover {
+	width: 13em;
+	height: 13em;
+	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
+}
+
+.wrapper.clicker .clicker:active {
+	width: 11em;
+	height: 11em;
+}
+
+.wrapper.clicker .clicker::before {
+	content: "";
+	width: 1em;
+	height: 1em;
+	background: black;
+	display: block;
+	position: relative;
+	left: calc(50% - 0.5em);
+	top: 30%;
+	border-radius: 50%;
+}
+
+.wrapper.clicker .clicker::after {
+	content: "";
+	width: 50%;
+	height: 0.3em;
+	background: black;
+	display: block;
+	position: relative;
+	left: 25%;
+	top: 50%;
+}
+
+.wrapper.clicker .clicker.jim {
+	background: #00820d;
 }
 
 /* borders */
