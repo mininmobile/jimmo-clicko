@@ -1,0 +1,71 @@
+body, html {
+	width: 100vw;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+	background: #1c1c1c;
+	color: #ddd;
+	display: flex;
+	flex: 1;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+}
+
+/* clicker */
+
+.wrapper.clicker .clicker {
+	width: 12em;
+	height: 12em;
+}
+
+/* borders */
+
+.border {
+	background: #bbb;
+}
+
+.border.w {
+	width: 0.5em;
+}
+
+.border.h {
+	height: 0.5em;
+}
+
+/* wrappers */
+
+.wrapper {
+	display: flex;
+}
+
+.wrapper.h {
+	flex: 1;
+}
+
+.wrapper.sidebar {
+	min-width: 230px;
+	padding: 1em;
+	display: block;
+	flex: 0.3;
+}
+
+.wrapper.main {
+	flex: 1;
+	flex-direction: column;
+}
+
+.wrapper.clicker {
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	flex: 1;
+}
+
+.wrapper.upgrades {
+	min-height: 200px;
+	display: block;
+	flex: 0.4;
+}
