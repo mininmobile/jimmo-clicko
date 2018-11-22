@@ -43,8 +43,11 @@ p, h1, h2, h3, h4, h5, h6 {
 /* amount */
 
 .wrapper.clicker .amount {
-	margin-bottom: 5vh;
 	font-size: 2em;
+}
+
+.wrapper.clicker .sps {
+	margin-bottom: 5vh;
 }
 
 /* clicker */
