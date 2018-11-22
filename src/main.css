@@ -7,11 +7,29 @@ body, html {
 	color: #ddd;
 	display: flex;
 	flex: 1;
+	font-family: Arimo, serif;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
 	padding: 0;
 	margin: 0;
+}
+
+@font-face {
+	font-family: Arimo;
+	src: url(./font/Arimo-Regular.woff);
+}
+
+@font-face {
+	font-family: Arimo;
+	src: url(./font/Arimo-Bold.woff);
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: Arimo;
+	src: url(./font/Arimo-Italic.woff);
+	font-style: italic;
 }
 
 /* util */
@@ -22,14 +40,29 @@ p, h1, h2, h3, h4, h5, h6 {
 	100% { transform: rotate(-15deg); }
 }
 
+/* amount */
+
+.wrapper.clicker .amount {
+	margin-bottom: 5vh;
+	font-size: 2em;
+}
+
 /* clicker */
+
+.wrapper.clicker .clicker-container {
+	width: 13em;
+	height: 13em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 .wrapper.clicker .clicker {
 	width: 12em;
 	height: 12em;
 	border-radius: 50%;
 	cursor: pointer;
-	border: 0.30em solid black;
+	border: 0.3em solid black;
 	transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 	animation: wiggle 3s infinite ease-in-out;
 }
@@ -37,12 +70,12 @@ p, h1, h2, h3, h4, h5, h6 {
 .wrapper.clicker .clicker:hover {
 	width: 13em;
 	height: 13em;
-	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
 }
 
 .wrapper.clicker .clicker:active {
 	width: 11em;
 	height: 11em;
+	transition: width 0.1s ease-in-out, height 0.1s ease-in-out;
 }
 
 .wrapper.clicker .clicker::before {
